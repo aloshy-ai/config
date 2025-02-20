@@ -20,3 +20,6 @@ modules/nixos/desktop/addons/ags/bar/src/types
 
 # Devbox
 .devbox
+
+# Webstorm
+.idea
