@@ -40,7 +40,7 @@ pkgs.appimageTools.wrapType2 rec {
     description = "A simple and easy to use mod manager for several games using Thunderstore.";
     homepage = "https://github.com/ebkr/r2modmanPlus";
     license = licenses.mit;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
     platforms = [ "x86_64-linux" ];
     mainProgram = "r2modman";
   };

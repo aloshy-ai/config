@@ -27,7 +27,7 @@ let
   new-meta = with lib; {
     description = "A helper for downloading the latest nix-index database.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 in
 override-meta new-meta nix-update-index

@@ -40,7 +40,7 @@ let
   new-meta = with lib; {
     description = "A helper to list all of the NixOS hosts available from your flake.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 in
 override-meta new-meta nixos-hosts

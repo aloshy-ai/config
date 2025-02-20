@@ -40,7 +40,7 @@ let
   new-meta = with lib; {
     description = "Extra desktop items for running Steam in different modes.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 
   package = symlinkJoin {

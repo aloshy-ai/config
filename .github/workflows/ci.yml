@@ -18,3 +18,10 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    with:
+      runner-map: |
+        {
+          "aarch64-darwin": "halite",
+          "aarch64-linux": "vesuvianite",
+          "x86_64-linux": "adamite"
+        }

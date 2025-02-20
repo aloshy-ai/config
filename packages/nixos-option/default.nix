@@ -22,7 +22,7 @@ let
   new-meta = with lib; {
     description = "A wrapper around nixos-option to work with a Flake-based configuration.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 
   package = runCommandNoCC "nixos-option" { buildInputs = [ makeWrapper ]; } ''

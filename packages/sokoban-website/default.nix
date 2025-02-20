@@ -12,7 +12,7 @@ let
     description = "The website for [sokoban.app](https://sokoban.app).";
     homepage = "https://sokoban.app";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
   package = runCommandNoCC "sokoban-website" { src = inputs.sokoban-app-website.outPath; } ''
     ln -s $src $out

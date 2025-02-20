@@ -11,6 +11,6 @@ bibata-cursors.overrideAttrs (oldAttrs: {
   # src = "${inputs.bibata-cursors}";
 
   meta = oldAttrs.meta // {
-    maintainers = with lib.maintainers; oldAttrs.meta.maintainers ++ [ jakehamilton ];
+    maintainers = with lib.maintainers; oldAttrs.meta.maintainers ++ [ ];
   };
 })

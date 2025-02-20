@@ -21,10 +21,12 @@
     "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
     "ghcr.io/ChristopherMacGown/devcontainer-features/direnv:1": {},
     "ghcr.io/schlich/devcontainer-features/starship:0": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/nix:1": {
       "extraNixConfig": [
         "experimental-features = nix-command flakes",
-        "warn-dirty = false"
+        "warn-dirty = false",
+        "extra-platforms = x86_64-linux aarch64-linux aarch64-darwin"
       ],
       "packages": [
         "devbox"

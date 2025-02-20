@@ -33,7 +33,7 @@ let
       description = "A very simple static homepage for your server.";
       homepage = "https://github.com/bastienwirtz/homer";
       license = licenses.asl20;
-      maintainers = with maintainers; [ jakehamilton ];
+      maintainers = with maintainers; [ ];
     };
 
     doDist = false;

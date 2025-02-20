@@ -33,7 +33,7 @@ pkgs.appimageTools.wrapType2 rec {
     description = "A friendly cross-platform Installer for Ubuntu Touch.";
     homepage = "https://devices.ubuntu-touch.io/installer";
     license = licenses.gpl3;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
     platforms = [ "x86_64-linux" ];
   };
 }

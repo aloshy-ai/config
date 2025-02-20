@@ -19,7 +19,7 @@ let
     description = "A little tool for big (monorepo) projects.";
     homepage = "https://www.npmjs.com/package/@jakehamilton/titan";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
   package = runCommandNoCC "titan" { src = node-packages."@jakehamilton/titan"; } ''
     rstrip() {

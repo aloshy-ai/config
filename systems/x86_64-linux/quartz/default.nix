@@ -77,22 +77,6 @@ with lib.${namespace};
         short = true;
       };
 
-      vault = {
-        enable = false;
-
-        policies =
-          builtins.foldl'
-            (policies: file: policies // { "${snowfall.path.get-file-name-without-extension file}" = file; })
-            { }
-            (
-              builtins.filter (snowfall.path.has-file-extension "hcl") (
-                builtins.map (
-                  path: ./vault/policies + "/${builtins.baseNameOf (builtins.unsafeDiscardStringContext path)}"
-                ) (snowfall.fs.get-files ./vault/policies)
-              )
-            );
-      };
-
       samba = {
         enable = true;
 
@@ -125,15 +109,6 @@ with lib.${namespace};
             path = "/persist/share/documents";
 
             # For configuration options, see: man 5 smb.conf
-            extra-config = {
-              "create mask" = "0755";
-              "write list" = config.${namespace}.user.name;
-              "read list" = config.${namespace}.user.name;
-            };
-          };
-          vault = {
-            path = "/persist/share/vault";
-
             extra-config = {
               "create mask" = "0755";
               "write list" = config.${namespace}.user.name;
@@ -237,12 +212,6 @@ with lib.${namespace};
                   target = "_blank";
                 }
                 {
-                  name = "Vault";
-                  icon = "fas fa-lock";
-                  url = "https://vault.quartz.hamho.me";
-                  target = "_blank";
-                }
-                {
                   name = "Hydra";
                   icon = "fas fa-dragon";
                   url = "https://hydra.quartz.hamho.me";
@@ -337,10 +306,6 @@ with lib.${namespace};
             port = 4533;
           }
           // shared-config
-        );
-
-        "vault.quartz.hamho.me" = network.create-proxy (
-          (network.get-address-parts config.services.vault.address) // shared-config
         );
       };
   };

@@ -13,7 +13,7 @@ let
   new-meta = with lib; {
     description = "A helper to list all of the NixOS hosts available from your flake.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 
   package =
@@ -23,7 +23,7 @@ let
           description = "udev rules for the ubports installer to recognize android devices.";
           homepage = "https://docs.ubports.com/en/latest/userguide/install.html#missing-udev-rules";
           license = licenses.gpl3;
-          maintainers = with maintainers; [ jakehamilton ];
+          maintainers = with maintainers; [ ];
           platforms = [ "x86_64-linux" ];
         };
       }

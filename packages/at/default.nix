@@ -19,7 +19,7 @@ runCommandNoCC "at"
       mainProgram = "@";
       description = "@ - JavaScript stdio transformation tool.";
       homepage = "https://github.com/suchipi/at-js#readme";
-      maintainers = with maintainers; [ jakehamilton ];
+      maintainers = with maintainers; [ ];
       license = licenses.mit;
     };
   }

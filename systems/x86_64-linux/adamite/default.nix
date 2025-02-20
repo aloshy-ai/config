@@ -45,13 +45,9 @@ with lib.${namespace};
       tailscale = enabled;
 
       websites = {
-        traek = enabled;
-        dotbox = enabled;
         noop-ai = enabled;
         sokoban = enabled;
-        jakehamilton = enabled;
         beyondthefringeoc = enabled;
-        snowfall-docs = enabled;
       };
     };
 

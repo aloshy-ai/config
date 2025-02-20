@@ -12,7 +12,7 @@ let
 
     description = "A desktop item to open Twitter in Firefox.";
     license = lib.licenses.asl20;
-    maintainers = with lib.maintainers; [ jakehamilton ];
+    maintainers = with lib.maintainers; [ ];
   };
 
   twitter = makeDesktopItem {

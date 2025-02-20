@@ -11,7 +11,7 @@ let
   new-meta = with lib; {
     description = "A helper show the current git revision of the system configuration.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 
   package = pkgs.writeShellScriptBin "nixos-revision" ''

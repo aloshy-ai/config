@@ -35,23 +35,6 @@ with lib.${namespace};
     desktop.gnome = {
       monitors = ./monitors.xml;
     };
-
-    hardware.audio = {
-      alsa-monitor.rules = [
-        (mkAlsaRename {
-          name = "alsa_card.usb-Generic_Blue_Microphones_2240BAH095W8-00";
-          description = "Blue Yeti";
-        })
-        (mkAlsaRename {
-          name = "alsa_output.usb-Generic_Blue_Microphones_2240BAH095W8-00.analog-stereo";
-          description = "Blue Yeti";
-        })
-        (mkAlsaRename {
-          name = "alsa_input.usb-Generic_Blue_Microphones_2240BAH095W8-00.analog-stereo";
-          description = "Blue Yeti";
-        })
-      ];
-    };
   };
 
   plusultra.home.extraOptions = {

@@ -8,12 +8,6 @@
     # NixPkgs Unstable
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Lix
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Home Manager
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -80,12 +74,6 @@
       # the build fails. Re-enable this after some time has passed.
       inputs.nixpkgs.follows = "unstable";
       inputs.nixpkgs-stable.follows = "nixpkgs";
-    };
-
-    # Vault Integration
-    vault-service = {
-      url = "github:DeterminateSystems/nixos-vault-service";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Discord Replugged
@@ -160,11 +148,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.unstable.follows = "unstable";
     };
-    jakehamilton-website = {
-      url = "github:jakehamilton/jakehamilton.dev";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.unstable.follows = "unstable";
-    };
     noop-ai-website = {
       url = "github:noopai/noop.ai";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -174,10 +157,7 @@
       url = "https://github.com/jakehamilton/sokoban.app/releases/download/v1/sokoban.app.tar.gz";
       flake = false;
     };
-    snowfall-docs = {
-      url = "github:snowfallorg/docs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
     nixpkgs-news = {
       url = "github:jakehamilton/nixpkgs.news";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -223,16 +203,12 @@
           icehouse.overlays.default
           rf.overlays.default
           attic.overlays.default
-          snowfall-docs.overlays.default
           nixpkgs-news.overlays.default
         ];
 
         systems.modules.nixos = with inputs; [
           avalanche.nixosModules."avalanche/desktop"
           home-manager.nixosModules.home-manager
-          vault-service.nixosModules.nixos-vault-service
-          lix-module.nixosModules.default
-          # TODO: Replace plusultra.services.attic now that vault-agent
           # exists and can force override environment files.
           # attic.nixosModules.atticd
         ];

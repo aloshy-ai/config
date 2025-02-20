@@ -31,7 +31,7 @@ let
   new-meta = with lib; {
     description = "A helper for installing protonup on NixOS.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 in
 override-meta new-meta nix-get-proton-up

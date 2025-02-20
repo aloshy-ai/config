@@ -13,7 +13,7 @@ let
   new-meta = with lib; {
     description = "A replacement for the default xdg-open program which correctly handles portals.";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 
   # TODO can this maybe suck less

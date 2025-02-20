@@ -59,6 +59,6 @@ pkgs.stdenvNoCC.mkDerivation {
   meta = with lib; {
     description = "Some good wallpapers!";
     license = licenses.asl20;
-    maintainers = with maintainers; [ jakehamilton ];
+    maintainers = with maintainers; [ ];
   };
 }

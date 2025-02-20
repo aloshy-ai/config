@@ -27,7 +27,7 @@ let
     src.meta
     // {
       description = "The website for beyondthefringeoc.com.";
-      maintainers = with maintainers; [ jakehamilton ];
+      maintainers = with maintainers; [ ];
     };
 in
 override-meta new-meta src
