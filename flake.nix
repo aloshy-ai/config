@@ -8,12 +8,6 @@
     # NixPkgs Unstable
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Lix
-    lix = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Home Manager
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -229,7 +223,6 @@
           attic.overlays.default
           snowfall-docs.overlays.default
           nixpkgs-news.overlays.default
-          lix.overlays.default
         ];
 
         systems.modules.nixos = with inputs; [
