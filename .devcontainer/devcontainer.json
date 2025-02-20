@@ -1,0 +1,33 @@
+{
+  "name": "Devbox Remote Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "fuadpashayev.bottom-terminal",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-github-actions",
+        "SanjulaGanepola.github-local-actions",
+        "GitHub.vscode-pull-request-github",
+        "bbenoist.Nix",
+        "jetpack-io.devbox"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/ChristopherMacGown/devcontainer-features/direnv:1": {},
+    "ghcr.io/schlich/devcontainer-features/starship:0": {},
+    "ghcr.io/devcontainers/features/nix:1": {
+      "extraNixConfig": "experimental-features = nix-command flakes",
+      "packages": [
+        "devbox"
+      ]
+    }
+  },
+  "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "postCreateCommand": "devbox shellenv --init-hook >> ~/.profile",
+  "postStartCommand": "direnv allow; devbox shell"
+}
