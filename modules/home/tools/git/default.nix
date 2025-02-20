@@ -6,7 +6,7 @@
   ...
 }:
 let
-  inherit (lib) types mkEnableOption mkIf;
+  inherit (lib) types mkEnableOption mkIf mkDefault;
   inherit (lib.${namespace}) mkOpt enabled;
 
   cfg = config.${namespace}.tools.git;
@@ -44,7 +44,7 @@ in
           whitespace = "trailing-space,space-before-tab";
         };
         safe = {
-          directory = "${user.home}/work/config/.git";
+          directory = mkDefault "${user.home}/work/config/.git";
         };
       };
     };

@@ -24,16 +24,16 @@ in
     };
 
     fonts = {
-      fontDir = enabled;
+      # fontDir = enabled;
 
-      fonts =
+      packages =
         with pkgs;
         [
           noto-fonts
           noto-fonts-cjk-sans
           noto-fonts-cjk-serif
           noto-fonts-emoji
-          (nerdfonts.override { fonts = [ "Hack" ]; })
+          nerd-fonts.hack
         ]
         ++ cfg.fonts;
     };

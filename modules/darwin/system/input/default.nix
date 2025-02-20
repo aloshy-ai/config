@@ -26,7 +26,7 @@ in
 
         defaults = {
           ".GlobalPreferences" = {
-            "com.apple.mouse.scaling" = "1";
+            "com.apple.mouse.scaling" = 1.0;
           };
 
           NSGlobalDomain = {
@@ -45,7 +45,7 @@ in
         };
       };
 
-      snowfallorg.user.${config.${namespace}.user.name}.home.config = {
+      snowfallorg.users.${config.${namespace}.user.name}.home.config = {
         home.activation = {
           # Disable special keys when using Option as a modifier.
           # https://superuser.com/questions/941286/disable-default-option-key-binding

@@ -3,23 +3,23 @@
 
   inputs = {
     # NixPkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
     # NixPkgs Unstable
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Lix
     lix = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Home Manager
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # macOS Support
-    darwin.url = "github:lnl7/nix-darwin";
+    darwin.url = "github:lnl7/nix-darwin/nix-darwin-24.11";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Hardware Configuration
@@ -39,8 +39,8 @@
     # avalanche.url = "path:/home/short/work/@snowfallorg/avalanche";
     avalanche.inputs.nixpkgs.follows = "unstable";
 
-    aux-website.url = "git+ssh://forgejo@git.auxolotl.org/auxolotl/website.git";
-    aux-website.inputs.nixpkgs.follows = "nixpkgs";
+    # aux-website.url = "git+ssh://forgejo@git.auxolotl.org/auxolotl/website.git";
+    # aux-website.inputs.nixpkgs.follows = "nixpkgs";
 
     # Snowfall Flake
     flake.url = "github:snowfallorg/flake?ref=v1.4.1";
@@ -101,10 +101,10 @@
       url = "github:NurMarvin/discord-tweaks";
       flake = false;
     };
-    discord-nord-theme = {
-      url = "github:DapperCore/NordCord";
-      flake = false;
-    };
+    # discord-nord-theme = {
+    #   url = "github:DapperCore/NordCord";
+    #   flake = false;
+    # };
 
     # Cows!
     cowsay = {
@@ -217,7 +217,7 @@
 
         overlays = with inputs; [
           avalanche.overlays.default
-          aux-website.overlays.default
+          # aux-website.overlays.default
           neovim.overlays.default
           tmux.overlay
           flake.overlays.default
