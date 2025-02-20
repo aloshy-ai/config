@@ -1790,26 +1790,6 @@
         "type": "github"
       }
     },
-    "nix-ld": {
-      "inputs": {
-        "nixpkgs": [
-          "unstable"
-        ]
-      },
-      "locked": {
-        "lastModified": 1739790836,
-        "narHash": "sha256-ksegG5wSllKmBqId/BtHVje9E5s0I+uCWgiFeLv2RzM=",
-        "owner": "Mic92",
-        "repo": "nix-ld",
-        "rev": "36420e7b304b5071da5eedd176c0a567fd821861",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Mic92",
-        "repo": "nix-ld",
-        "type": "github"
-      }
-    },
     "nixlib": {
       "locked": {
         "lastModified": 1736643958,
@@ -2189,7 +2169,6 @@
         "lasersandfeelings": "lasersandfeelings",
         "lix": "lix",
         "neovim": "neovim",
-        "nix-ld": "nix-ld",
         "nixos-generators": "nixos-generators",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",

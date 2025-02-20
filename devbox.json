@@ -20,9 +20,13 @@
       "build-m3pro": [
         "flake build-darwin m3pro"
       ],
+      "build-aarch64-linux": [
+        "nix build .#nixosConfigurations.vesuvianite.config.system.build.toplevel"
+      ],
       "rate-limit-fix": [
         "mkdir -p ~/.config/nix",
         "gh auth status -a > /dev/null || gh auth login",
+        "sed -i '/^access-tokens/d' ~/.config/nix/nix.conf 2>/dev/null || true",
         "echo 'access-tokens = github.com='$(gh auth token) >> ~/.config/nix/nix.conf"
       ]
     }

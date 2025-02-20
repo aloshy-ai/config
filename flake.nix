@@ -61,10 +61,6 @@
     deploy-rs.url = "github:serokell/deploy-rs";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Run unpatched dynamically compiled binaries
-    nix-ld.url = "github:Mic92/nix-ld";
-    nix-ld.inputs.nixpkgs.follows = "unstable";
-
     # Neovim
     neovim.url = "github:jakehamilton/neovim";
     # neovim.inputs.nixpkgs.follows = "unstable";
@@ -235,7 +231,6 @@
         systems.modules.nixos = with inputs; [
           avalanche.nixosModules."avalanche/desktop"
           home-manager.nixosModules.home-manager
-          nix-ld.nixosModules.nix-ld
           vault-service.nixosModules.nixos-vault-service
           # lix.nixosModules.default
           # TODO: Replace plusultra.services.attic now that vault-agent
