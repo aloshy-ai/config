@@ -1,1 +1,7 @@
-{ channels, ... }: final: prev: { inherit (channels.unstable) bun; }
+{ channels, ... }: final: prev: {
+  bun = channels.unstable.bun.overrideAttrs (old: {
+    meta = old.meta // {
+      mainProgram = "bun";
+    };
+  });
+}

@@ -23,7 +23,8 @@
     "ghcr.io/schlich/devcontainer-features/starship:0": {},
     "ghcr.io/devcontainers/features/nix:1": {
       "extraNixConfig": [
-        "experimental-features = nix-command flakes"
+        "experimental-features = nix-command flakes",
+        "warn-dirty = false"
       ],
       "packages": [
         "devbox"

@@ -14,6 +14,19 @@
       "devbox run --list"
     ],
     "scripts": {
+      "fix-github-ratelimit": [
+        "mkdir -p ~/.config/nix",
+        "gh auth status -a > /dev/null || gh auth login",
+        "sed -i '/^access-tokens/d' ~/.config/nix/nix.conf 2>/dev/null || true",
+        "echo 'access-tokens = github.com='$(gh auth token) >> ~/.config/nix/nix.conf"
+      ],
+      "update-lockfile": [
+        "devbox run fix-github-ratelimit",
+        "flake update"
+      ],
+      "show-derivations": [
+        "flake show"
+      ],
       "build-rpi4": [
         "nix build .#sd-aarch64Configurations.rpi4"
       ],
@@ -22,12 +35,6 @@
       ],
       "build-aarch64-linux": [
         "nix build .#nixosConfigurations.vesuvianite.config.system.build.toplevel"
-      ],
-      "rate-limit-fix": [
-        "mkdir -p ~/.config/nix",
-        "gh auth status -a > /dev/null || gh auth login",
-        "sed -i '/^access-tokens/d' ~/.config/nix/nix.conf 2>/dev/null || true",
-        "echo 'access-tokens = github.com='$(gh auth token) >> ~/.config/nix/nix.conf"
       ]
     }
   }
