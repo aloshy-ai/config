@@ -18,10 +18,13 @@
     }
   },
   "features": {
+    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
     "ghcr.io/ChristopherMacGown/devcontainer-features/direnv:1": {},
     "ghcr.io/schlich/devcontainer-features/starship:0": {},
     "ghcr.io/devcontainers/features/nix:1": {
-      "extraNixConfig": "experimental-features = nix-command flakes",
+      "extraNixConfig": [
+        "experimental-features = nix-command flakes"
+      ],
       "packages": [
         "devbox"
       ]

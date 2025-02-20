@@ -1,7 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
   "packages": [
-    "github:snowfallorg/flake"
+    "github:snowfallorg/flake",
+    "gh@latest",
+    "curl@latest"
   ],
   "env": {
     "DIRENV_LOG_FORMAT": ""
@@ -17,6 +19,11 @@
       ],
       "build-m3pro": [
         "flake build-darwin m3pro"
+      ],
+      "rate-limit-fix": [
+        "mkdir -p ~/.config/nix",
+        "gh auth status -a > /dev/null || gh auth login",
+        "echo 'access-tokens = github.com='$(gh auth token) >> ~/.config/nix/nix.conf"
       ]
     }
   }
