@@ -35,7 +35,7 @@ in
         misc = enabled;
         fup-repl = enabled;
         comma = enabled;
-        nix-ld = enabled;
+        nix-ld = disabled;
         bottom = enabled;
       };
 

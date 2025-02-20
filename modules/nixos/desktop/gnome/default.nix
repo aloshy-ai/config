@@ -14,14 +14,14 @@ let
 
   defaultExtensions = with pkgs.gnomeExtensions; [
     appindicator
-    aylurs-widgets
+    # aylurs-widgets
     dash-to-dock
     gsconnect
     gtile
     just-perfection
     logo-menu
     no-overview
-    remove-app-menu
+    # remove-app-menu
     space-bar
     top-bar-organizer
     wireless-hid
@@ -83,11 +83,11 @@ in
 
     environment.gnome.excludePackages = with pkgs.gnome; [
       pkgs.gnome-tour
-      epiphany
-      geary
-      gnome-font-viewer
-      gnome-system-monitor
-      gnome-maps
+      pkgs.epiphany
+      pkgs.geary
+      pkgs.gnome-font-viewer
+      pkgs.gnome-system-monitor
+      pkgs.gnome-maps
     ];
 
     systemd.tmpfiles.rules =
