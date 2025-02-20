@@ -18,7 +18,3 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    with:
-      enable-ssh-agent: true
-    secrets:
-      ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
