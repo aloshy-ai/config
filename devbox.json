@@ -30,8 +30,8 @@
       "build-rpi4": [
         "nix build .#sd-aarch64Configurations.rpi4"
       ],
-      "build-m3pro": [
-        "flake build-darwin m3pro"
+      "build-aarch64-darwin": [
+        "flake build-darwin halite"
       ],
       "build-aarch64-linux": [
         "nix build .#nixosConfigurations.vesuvianite.config.system.build.toplevel"
