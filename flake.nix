@@ -9,7 +9,7 @@
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Lix
-    lix = {
+    lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -225,14 +225,13 @@
           attic.overlays.default
           snowfall-docs.overlays.default
           nixpkgs-news.overlays.default
-          lix.overlays.default
         ];
 
         systems.modules.nixos = with inputs; [
           avalanche.nixosModules."avalanche/desktop"
           home-manager.nixosModules.home-manager
           vault-service.nixosModules.nixos-vault-service
-          # lix.nixosModules.default
+          lix-module.nixosModules.default
           # TODO: Replace plusultra.services.attic now that vault-agent
           # exists and can force override environment files.
           # attic.nixosModules.atticd
