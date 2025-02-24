@@ -25,8 +25,7 @@
     "ghcr.io/devcontainers/features/nix:1": {
       "extraNixConfig": [
         "experimental-features = nix-command flakes",
-        "warn-dirty = false",
-        "extra-platforms = x86_64-linux aarch64-linux aarch64-darwin"
+        "warn-dirty = false"
       ],
       "packages": [
         "devbox"
