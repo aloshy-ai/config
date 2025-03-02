@@ -9,7 +9,7 @@
     ],
     "scripts": {
       "format": "nix fmt .",
-      "darwin-install": "nix run nix-darwin#darwin-rebuild switch",
+      "darwin-install": "nix run nix-darwin#darwin-rebuild switch --flake .",
       "m2pro": "flake switch m2pro",
       "rpi4": "nix build .#sd-aarch64Configurations.rpi4"
     }
