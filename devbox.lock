@@ -4,9 +4,6 @@
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
       "resolved": "github:NixOS/nixpkgs/3a05eebede89661660945da1f151959900903b6a?lastModified=1740547748&narHash=sha256-Ly2fBL1LscV%2BKyCqPRufUBuiw%2BzmWrlJzpWOWbahplg%3D"
     },
-    "github:nix-community/nixos-generators": {
-      "resolved": "github:nix-community/nixos-generators/d002ce9b6e7eb467cd1c6bb9aef9c35d191b5453?lastModified=1737057290&narHash=sha256-3Pe0yKlCc7EOeq1X%2FaJVDH0CtNL%2BtIBm49vpepwL1MQ%3D"
-    },
     "github:snowfallorg/flake": {
       "resolved": "github:snowfallorg/flake/d3b1167f7265d28549930b95b98327c277ef8afd?lastModified=1716675632&narHash=sha256-AOgmoVZvMPUMSlHMrRjWaPykNS5YWxnUNp7STgfjGdA%3D"
     }

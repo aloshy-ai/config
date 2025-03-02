@@ -11,7 +11,7 @@
       "format": "nix fmt .",
       "darwin-install": "nix run nix-darwin#darwin-rebuild switch",
       "m2pro": "flake switch m2pro",
-      "rpi4": "flake switch rpi4"
+      "rpi4": "nix build .#sd-aarch64Configurations.rpi4"
     }
   }
 }

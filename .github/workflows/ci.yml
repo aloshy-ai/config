@@ -21,13 +21,5 @@ jobs:
     with:
       visibility: public
       enable-ssh-agent: true
-      runner-map: |
-        {
-          "aarch64-darwin": "macos-latest-xlarge",
-          "aarch64-linux": "UbuntuLatest32Cores128GArm",
-          "i686-linux": "UbuntuLatest32Cores128G",
-          "x86_64-darwin": "macos-latest-xlarge",
-          "x86_64-linux": "UbuntuLatest32Cores128G"
-        }
     secrets:
       ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
