@@ -18,9 +18,14 @@
   modulesPath,
   ...
 }: {
-  imports = [
-    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
-    "${inputs.nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64-installer.nix"
+  # imports = [
+  #   "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
+  #   "${inputs.nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64-installer.nix"
+  # ];
+
+  imports = with inputs.nixos-hardware.nixosModules; [
+    (modulesPath + "/installer/scan/not-detected.nix")
+    raspberry-pi-4
   ];
 
   # Your configuration.
@@ -39,28 +44,26 @@
     useDHCP = true;
   };
 
-  # Users configuration
-  users.users.root.hashedPassword = ""; # Empty hash allows login with any password initially
   users.mutableUsers = true; # Allow password changes
 
   # SD image specific settings
-  sdImage = {
-    compressImage = true;
-    imageBaseName = "nixos-rpi4";
-  };
+  # sdImage = {
+  #   compressImage = true;
+  #   imageBaseName = "nixos-rpi4";
+  # };
 
   # Hardware configuration
-  hardware = {
-    enableRedistributableFirmware = true;
-    firmware = [pkgs.raspberrypiWirelessFirmware];
-  };
+  # hardware = {
+  #   enableRedistributableFirmware = true;
+  #   firmware = [pkgs.raspberrypiWirelessFirmware];
+  # };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_rpi4;
-    initrd.availableKernelModules = ["usbhid" "usb_storage"];
+    # kernelPackages = pkgs.linuxPackages_rpi4;
+    # initrd.availableKernelModules = ["usbhid" "usb_storage"];
     loader = {
       grub.enable = false;
-      generic-extlinux-compatible.enable = true;
+      # generic-extlinux-compatible.enable = true;
     };
   };
 }
