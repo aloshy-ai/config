@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "fuadpashayev.bottom-terminal",
+        "jetpack-io.devbox",
+        "github.github-vscode-theme",
+        "ms-vscode-remote.remote-containers",
+        "bbenoist.nix",
+        "zongou.vs-seti-jetbrainsmononerdfontmono",
+        "github.copilot",
+        "github.vscode-github-actions",
+        "github.remotehub"
+    ]
+}

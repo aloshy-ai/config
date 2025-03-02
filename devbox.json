@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
+  "packages": [
+    "github:snowfallorg/flake"
+  ],
+  "shell": {
+    "init_hook": [
+      "alias nix='nix --extra-experimental-features nix-command'"
+    ],
+    "scripts": {
+      "format": "nix fmt .",
+      "darwin-install": "nix run nix-darwin#darwin-rebuild switch",
+      "m2pro": "flake switch m2pro",
+      "rpi4": "flake switch rpi4"
+    }
+  }
+}

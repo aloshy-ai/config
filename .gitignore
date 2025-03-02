@@ -1,0 +1,4 @@
+.devbox
+.env*
+result
+.DS_Store

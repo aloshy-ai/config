@@ -1,0 +1,31 @@
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - v?[0-9]+.[0-9]+.[0-9]+*
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  DeterminateCI:
+    uses: DeterminateSystems/ci/.github/workflows/workflow.yml@main
+    permissions:
+      id-token: write
+      contents: read
+    with:
+      visibility: public
+      enable-ssh-agent: true
+      runner-map: |
+        {
+          "aarch64-darwin": "macos-latest-xlarge",
+          "aarch64-linux": "UbuntuLatest32Cores128GArm",
+          "i686-linux": "UbuntuLatest32Cores128G",
+          "x86_64-darwin": "macos-latest-xlarge",
+          "x86_64-linux": "UbuntuLatest32Cores128G"
+        }
