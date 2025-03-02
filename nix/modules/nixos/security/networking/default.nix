@@ -13,17 +13,13 @@
   format, # A normalized name for the system target (eg. `iso`).
   virtual, # A boolean to determine whether this system is a virtual target using nixos-generators.
   systems, # An attribute map of your defined hosts.
-  # All other arguments come from the system system.
+  # All other arguments come from the module system.
   config,
-  modulesPath,
   ...
 }: {
-  imports = with inputs.nixos-hardware.nixosModules; [
-    (modulesPath + "/installer/scan/not-detected.nix")
-    raspberry-pi-4
-  ];
-
   # Your configuration.
-  system.stateVersion = "25.05";
-  boot.loader.grub.enable = false;
+  networking = {
+    wireless.enable = false; # Disable wireless by default
+    useDHCP = true;
+  };
 }
