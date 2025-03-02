@@ -29,3 +29,5 @@ jobs:
           "x86_64-darwin": "macos-latest-xlarge",
           "x86_64-linux": "UbuntuLatest32Cores128G"
         }
+    secrets:
+      ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
