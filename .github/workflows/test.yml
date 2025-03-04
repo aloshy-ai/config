@@ -14,11 +14,8 @@ jobs:
       - name: Install devbox dependencies
         run: devbox install
 
-      - name: Install nix-darwin
-        run: devbox run darwin-install
-
-      - name: Switch as m2pro
+      - name: Build m2pro darwinConfiguration
         run: devbox run m2pro
 
-      - name: Build Nixos for rpi4
+      - name: Build rpi4 nixosConfiguration
         run: devbox run rpi4

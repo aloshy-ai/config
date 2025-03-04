@@ -5,13 +5,14 @@
   ],
   "shell": {
     "init_hook": [
-      "alias nix='nix --extra-experimental-features nix-command'"
+      "alias nix='nix --extra-experimental-features nix-command'",
+      "alias darwin-rebuild='nix run github:LnL7/nix-darwin#darwin-rebuild'",
+      "devbox run --list"
     ],
     "scripts": {
-      "format": "nix fmt .",
-      "darwin-install": "nix run nix-darwin#darwin-rebuild switch -- --flake .",
-      "m2pro": "flake switch m2pro",
-      "rpi4": "nix build .#sd-aarch64Configurations.rpi4"
+      "format":         "nix fmt .",
+      "m2pro":          "flake build-darwin m2pro",
+      "rpi4":           "nix build .#sd-aarch64Configurations.rpi4"
     }
   }
 }

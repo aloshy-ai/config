@@ -1,20 +1,37 @@
 {
-    "name": "Devbox Remote Container",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "name": "aloshy.🅰🅸 | Nix Devbox",
+    "image": "ghcr.io/xtruder/nix-devcontainer:v1",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
     "workspaceFolder": "/workspace",
     "customizations": {
       "vscode": {
-        "settings": {},
+        "settings": {
+          "editor.fontSize": 14,
+          "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+          "editor.fontLigatures": true,
+          "terminal.integrated.fontLigatures.enabled": true,
+          "files.autoSave": "afterDelay",
+          "workbench.colorTheme": "GitHub Dark",
+          "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix"
+        },
         "extensions": [
+            "zongou.vs-seti-jetbrainsmononerdfontmono",
+            "SanjulaGanepola.github-local-actions",
+            "ms-vscode-remote.remote-containers",
+            "GitHub.vscode-pull-request-github",
+            "github.vscode-github-actions",
+            "arrterian.nix-env-selector",
             "fuadpashayev.bottom-terminal",
             "ms-azuretools.vscode-docker",
-            "github.vscode-github-actions",
-            "SanjulaGanepola.github-local-actions",
-            "GitHub.vscode-pull-request-github",
-            "bbenoist.Nix",
+            "github.github-vscode-theme",
+            "kamadorueda.alejandra",
+            "jnoortheen.nix-ide",
+            "fsevenm.run-it-on",
             "jetpack-io.devbox",
-            "zongou.vs-seti-jetbrainsmononerdfontmono"
+            "github.remotehub",
+            "github.copilot",
+            "bbenoist.Nix",
+            "mkhl.direnv"
         ]
       }
     },
@@ -30,6 +47,5 @@
         "flakeUri": "github:jetify-com/devbox/latest"
       }
     },
-    "postCreateCommand": "devbox shellenv --init-hook >> ~/.profile",
     "postStartCommand": "direnv allow > /dev/null 2>&1 || true"
   }

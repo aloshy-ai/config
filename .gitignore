@@ -1,4 +1,6 @@
 .devbox
+.direnv
 .env*
+!.envrc
 result
 .DS_Store
