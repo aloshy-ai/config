@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
 
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     snowfall-lib = {
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -64,11 +69,13 @@
       # Add modules to all Darwin systems.
       systems.modules.darwin = with inputs; [
         mac-app-util.darwinModules.default
+        lix-module.nixosModules.default
       ];
 
       # Add modules to all NixOS systems.
       systems.modules.nixos = with inputs; [
         nixos-generators.nixosModules.all-formats
+        lix-module.nixosModules.default
       ];
 
       # Add modules to all homes.
