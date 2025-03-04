@@ -7,13 +7,14 @@
       "vscode": {
         "settings": {},
         "extensions": [
-          "fuadpashayev.bottom-terminal",
-          "ms-azuretools.vscode-docker",
-          "github.vscode-github-actions",
-          "SanjulaGanepola.github-local-actions",
-          "GitHub.vscode-pull-request-github",
-          "bbenoist.Nix",
-          "jetpack-io.devbox"
+            "fuadpashayev.bottom-terminal",
+            "ms-azuretools.vscode-docker",
+            "github.vscode-github-actions",
+            "SanjulaGanepola.github-local-actions",
+            "GitHub.vscode-pull-request-github",
+            "bbenoist.Nix",
+            "jetpack-io.devbox",
+            "zongou.vs-seti-jetbrainsmononerdfontmono"
         ]
       }
     },
@@ -24,17 +25,11 @@
       "ghcr.io/devcontainers-extra/features/vscode-cli:1": {},
       "ghcr.io/schlich/devcontainer-features/starship:0": {},
       "ghcr.io/devcontainers/features/github-cli:1": {},
+      "ghcr.io/devcontainers/features/git:1": {},
       "ghcr.io/devcontainers/features/nix:1": {
-        "extraNixConfig": [
-          "experimental-features = nix-command flakes",
-          "extra-platforms = x86_64-linux aarch64-linux"
-        ],
-        "packages": [
-          "devbox"
-        ]
+        "flakeUri": "github:jetify-com/devbox/latest"
       }
     },
-    "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
     "postCreateCommand": "devbox shellenv --init-hook >> ~/.profile",
-    "postStartCommand": "direnv allow"
+    "postStartCommand": "direnv allow > /dev/null 2>&1 || true"
   }
