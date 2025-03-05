@@ -1,6 +1,6 @@
 {
-    "name": "aloshy.🅰🅸 | Nix Devbox",
-    "image": "ghcr.io/xtruder/nix-devcontainer:v1",
+    "name": "aloshy.🅰🅸 | DevContainer",
+    "image": "nixpkgs/devcontainer",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
     "workspaceFolder": "/workspace",
     "customizations": {
@@ -9,6 +9,8 @@
           "editor.fontSize": 14,
           "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
           "editor.fontLigatures": true,
+          "editor.stickyScroll.enabled": false,
+          "editor.minimap.enabled":false,
           "terminal.integrated.fontLigatures.enabled": true,
           "files.autoSave": "afterDelay",
           "workbench.colorTheme": "GitHub Dark",
@@ -34,18 +36,5 @@
             "mkhl.direnv"
         ]
       }
-    },
-    "features": {
-      "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
-      "ghcr.io/ChristopherMacGown/devcontainer-features/direnv:1": {},
-      "ghcr.io/devcontainers-extra/features/vscode-server:1": {},
-      "ghcr.io/devcontainers-extra/features/vscode-cli:1": {},
-      "ghcr.io/schlich/devcontainer-features/starship:0": {},
-      "ghcr.io/devcontainers/features/github-cli:1": {},
-      "ghcr.io/devcontainers/features/git:1": {},
-      "ghcr.io/devcontainers/features/nix:1": {
-        "flakeUri": "github:jetify-com/devbox/latest"
-      }
-    },
-    "postStartCommand": "direnv allow > /dev/null 2>&1 || true"
+    }
   }
