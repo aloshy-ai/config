@@ -13,10 +13,11 @@
   format, # A normalized name for the system target (eg. `iso`).
   virtual, # A boolean to determine whether this system is a virtual target using nixos-generators.
   systems, # An attribute map of your defined hosts.
-  # All other arguments come from the system system.
+  # All other arguments come from the module system.
   config,
   ...
 }: {
   # Your configuration.
-  system.stateVersion = 6;
+  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings.trusted-users = ["@admin" "@wheel" "@nixbld"];
 }

@@ -13,10 +13,18 @@
   format, # A normalized name for the system target (eg. `iso`).
   virtual, # A boolean to determine whether this system is a virtual target using nixos-generators.
   systems, # An attribute map of your defined hosts.
-  # All other arguments come from the system system.
+  # All other arguments come from the module system.
   config,
   ...
 }: {
   # Your configuration.
-  system.stateVersion = 6;
+  nix.linux-builder.enable = true;
+  nix.linux-builder.systems = ["aarch64-linux"];
+  nix.distributedBuilds = true;
+  system.activationScripts.postUserActivation.text = ''
+    if [ -f /etc/nix/builder_ed25519 ]; then
+      sudo chown "$USER" /etc/nix/builder_ed25519*
+      sudo chmod 600 /etc/nix/builder_ed25519*
+    fi
+  '';
 }
