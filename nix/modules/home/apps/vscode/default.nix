@@ -20,5 +20,15 @@
   # Your configuration.
   programs.vscode = {
     enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.nix
+      github.vscode-github-actions
+      github.copilot
+      github.copilot-chat
+      github.codespaces
+      github.github-vscode-theme
+      github.vscode-pull-request-github
+      esbenp.prettier-vscode
+    ];
   };
 }
