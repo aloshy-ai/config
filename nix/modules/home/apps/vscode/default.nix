@@ -20,15 +20,19 @@
   # Your configuration.
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      bbenoist.nix
+    profiles.default.extensions = with pkgs.vscode-extensions; [
+      ms-vscode-remote.remote-containers
+      github.vscode-pull-request-github
       github.vscode-github-actions
-      github.copilot
+      ms-azuretools.vscode-docker
+      github.github-vscode-theme
+      esbenp.prettier-vscode
+      kamadorueda.alejandra
       github.copilot-chat
       github.codespaces
-      github.github-vscode-theme
-      github.vscode-pull-request-github
-      esbenp.prettier-vscode
+      github.copilot
+      bbenoist.nix
+      mkhl.direnv
     ];
   };
 }

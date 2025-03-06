@@ -71,6 +71,10 @@
     };
   in
     lib.mkFlake {
+      channels-config = {
+        allowUnfree = true;
+      };
+
       # Add modules to all Darwin systems.
       systems.modules.darwin = with inputs; [
         mac-app-util.darwinModules.default
