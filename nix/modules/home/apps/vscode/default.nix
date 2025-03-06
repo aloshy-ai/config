@@ -18,21 +18,21 @@
   ...
 }: {
   # Your configuration.
-  programs.vscode = {
-    enable = true;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
-      ms-vscode-remote.remote-containers
-      github.vscode-pull-request-github
-      github.vscode-github-actions
-      ms-azuretools.vscode-docker
-      github.github-vscode-theme
-      esbenp.prettier-vscode
-      kamadorueda.alejandra
-      github.copilot-chat
-      github.codespaces
-      github.copilot
-      bbenoist.nix
-      mkhl.direnv
-    ];
-  };
+  # programs.vscode = {
+  #   enable = true;
+  #   profiles.default.extensions = with pkgs.vscode-extensions; [
+  #     ms-vscode-remote.remote-containers
+  #     github.vscode-pull-request-github
+  #     github.vscode-github-actions
+  #     ms-azuretools.vscode-docker
+  #     github.github-vscode-theme
+  #     esbenp.prettier-vscode
+  #     kamadorueda.alejandra
+  #     github.copilot-chat
+  #     github.codespaces
+  #     github.copilot
+  #     bbenoist.nix
+  #     mkhl.direnv
+  #   ];
+  # };
 }
