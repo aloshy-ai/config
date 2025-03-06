@@ -36,9 +36,9 @@
     },
     "features": {
       "ghcr.io/devcontainers/features/nix:1": {
-        "flakeUri": "github:jetify-com/devbox/latest",
-        "packages": "direnv"
+        "packages": "direnv devbox"
       }
     },
-    "postStartCommand": "direnv allow > /dev/null 2>&1 || true"
+    "postStartCommand": "direnv allow > /dev/null 2>&1 || true",
+    "postAttachCommand": "direnv reload"
   }
