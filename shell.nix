@@ -1,15 +1,14 @@
-{ pkgs ? import <nixpkgs> { } }:
-
+{pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
-     alejandra
-     starship
-     busybox
-     devbox
-     direnv
-     zsh
-     git
-     gh
+    alejandra
+    starship
+    busybox
+    devbox
+    direnv
+    zsh
+    git
+    gh
   ];
 
   # Set zsh as the default shell and initialize devbox

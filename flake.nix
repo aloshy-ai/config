@@ -55,12 +55,12 @@
         # Nix files.
         root = ./nix;
 
-        namespace = "my-namespace";
+        namespace = "ai.aloshy";
         meta = {
           # Your flake's preferred name in the flake registry.
-          name = "my-flake";
+          name = "config";
           # A pretty name for your flake.
-          title = "My Flake";
+          title = "aloshy.🅰🅸 | Config";
         };
       };
     };
