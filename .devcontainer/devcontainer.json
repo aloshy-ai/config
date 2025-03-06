@@ -1,6 +1,6 @@
 {
     "name": "aloshy.🅰🅸 | DevContainer",
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:alpine",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
     "workspaceFolder": "/workspace",
     "customizations": {
