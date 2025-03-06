@@ -39,5 +39,6 @@
         "flakeUri": "github:jetify-com/devbox/latest",
         "packages": "direnv"
       }
-    }
+    },
+    "postCreateCommand": "direnv allow > /dev/null 2>&1 || true"
   }
