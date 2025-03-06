@@ -40,5 +40,5 @@
         "packages": "direnv"
       }
     },
-    "postCreateCommand": "direnv allow > /dev/null 2>&1 || true"
+    "postStartCommand": "direnv allow > /dev/null 2>&1 || true"
   }
