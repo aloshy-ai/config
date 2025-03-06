@@ -39,10 +39,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nix-vscode-extensions = {
-    #   url = "github:nix-community/nix-vscode-extensions";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -71,9 +71,9 @@
     };
   in
     lib.mkFlake {
-      # channels-config = {
-      #   allowUnfree = true;
-      # };
+      channels-config = {
+        allowUnfree = true;
+      };
 
       # Add modules to all Darwin systems.
       systems.modules.darwin = with inputs; [
