@@ -70,11 +70,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-rosetta-builder = {
-      url = "github:cpick/nix-rosetta-builder";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # vscode-server = {
     #   url = "github:nix-community/nixos-vscode-server";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -126,7 +121,6 @@
         mac-app-util.darwinModules.default
         lix-module.nixosModules.default
         nix-homebrew.darwinModules.nix-homebrew
-        # nix-rosetta-builder.darwinModules.default
       ];
 
       # Add modules to all NixOS systems.
