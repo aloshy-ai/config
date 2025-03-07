@@ -23,7 +23,9 @@
       hostName = "nixos.tail9a6c09.ts.net";
       system = "aarch64-darwin";
       sshUser = "aloshy";
-      sshKey = "${config.home.homeDirectory}/.ssh/id_ed25519";
+      sshKey = "/Users/aloshy/.ssh/id_ed25519";
+      # ssh aloshy@nixos.tail9a6c09.ts.net "base64 -w0 /etc/ssh/ssh_host_ed25519_key.pub"
+      publicHostKey = "c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUpCckEzMDNYdUVQcDYrcmFPYnBlSkhIUURDazVLajFta1FuVDMyVXRwVkcgcm9vdEBuaXhvcwo=";
     }
   ];
 }
