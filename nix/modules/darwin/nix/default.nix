@@ -20,8 +20,8 @@
   nix = {
     package = pkgs.nix;
     settings = {
-      substituters = ["https://nix-community.cachix.org" "https://cache.nixos.org"];
-      trusted-public-keys = ["cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="];
+      substituters = ["https://nix-community.cachix.org" "https://cache.nixos.org" "https://aloshy-ai.cachix.org"];
+      trusted-public-keys = ["cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" "aloshy-ai.cachix.org-1:Obe01NXi7ZLo+hmlVEO1SFD0DPbvnX/Jnsy2GnsAuFY="];
       extra-nix-path = "nixpkgs=flake:nixpkgs";
       trusted-users = ["root" "@admin" "@nixbld"];
       extra-trusted-users = ["root" "@admin" "@nixbld"];
