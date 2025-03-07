@@ -74,11 +74,6 @@
     #   url = "github:nix-community/nixos-vscode-server";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-
-    fh = {
-      url = "https://flakehub.com/f/DeterminateSystems/fh/*";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs:
