@@ -18,13 +18,6 @@
   ...
 }: {
   # Your configuration.
-  nix.linux-builder.enable = true;
-  # nix.linux-builder.systems = ["aarch64-linux"];
-  # nix.distributedBuilds = true;
-  # system.activationScripts.postUserActivation.text = ''
-  #   if [ -f /etc/nix/builder_ed25519 ]; then
-  #     sudo chown "$USER" /etc/nix/builder_ed25519*
-  #     sudo chmod 600 /etc/nix/builder_ed25519*
-  #   fi
-  # '';
+  nix-rosetta-builder.onDemand = true;
+  # nix.linux-builder.enable = true;
 }

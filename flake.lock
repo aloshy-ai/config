@@ -270,11 +270,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1741343558,
-        "narHash": "sha256-BxuVEc99HvbrSXhsizyo0ri2gMWgubCgX4v67ZqPbJ8=",
+        "lastModified": 1741352324,
+        "narHash": "sha256-X8ciO7Z1xR1lDUGH2bH+RissPBKvk7OTvvXsq/KlDow=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "b25d85ff418a491af39c9209dcdea608fc92c772",
+        "rev": "5dc5d062df05d3ab147abe76aec259178610a4df",
         "type": "github"
       },
       "original": {
@@ -398,6 +398,27 @@
         "type": "github"
       }
     },
+    "nix-rosetta-builder": {
+      "inputs": {
+        "nixos-generators": "nixos-generators",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741217962,
+        "narHash": "sha256-sA+XCllOpMUIiWYHVM8LZXKhi0EAvm6SyHPqraoL1G8=",
+        "owner": "cpick",
+        "repo": "nix-rosetta-builder",
+        "rev": "afe11f64f49eadd465fedb92f11b03d9af3d16c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cpick",
+        "repo": "nix-rosetta-builder",
+        "type": "github"
+      }
+    },
     "nix-vscode-extensions": {
       "inputs": {
         "flake-utils": "flake-utils_3",
@@ -434,9 +455,46 @@
         "type": "github"
       }
     },
+    "nixlib_2": {
+      "locked": {
+        "lastModified": 1736643958,
+        "narHash": "sha256-tmpqTSWVRJVhpvfSN9KXBvKEXplrwKnSZNAoNPf/S/s=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "1418bc28a52126761c02dd3d89b2d8ca0f521181",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
     "nixos-generators": {
       "inputs": {
         "nixlib": "nixlib",
+        "nixpkgs": [
+          "nix-rosetta-builder",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1737057290,
+        "narHash": "sha256-3Pe0yKlCc7EOeq1X/aJVDH0CtNL+tIBm49vpepwL1MQ=",
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "rev": "d002ce9b6e7eb467cd1c6bb9aef9c35d191b5453",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "type": "github"
+      }
+    },
+    "nixos-generators_2": {
+      "inputs": {
+        "nixlib": "nixlib_2",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -485,11 +543,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1741351639,
-        "narHash": "sha256-GGk81ZSOiI1Fja5mBuFnwA/kvWpXhsA1AOqUXyxKEMk=",
+        "lastModified": 1741351959,
+        "narHash": "sha256-A3KsmJJc2tgjRTCFYKC9CI1WV1kHpt03wwEpar0fnBU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4ef7f3b7d2e85d3ad0b7e96d660e76ed5e9b3e25",
+        "rev": "6b8084c9ec3590c61470506729d702d8689d7427",
         "type": "github"
       },
       "original": {
@@ -509,8 +567,9 @@
         "lix-module": "lix-module",
         "mac-app-util": "mac-app-util",
         "nix-homebrew": "nix-homebrew",
+        "nix-rosetta-builder": "nix-rosetta-builder",
         "nix-vscode-extensions": "nix-vscode-extensions",
-        "nixos-generators": "nixos-generators",
+        "nixos-generators": "nixos-generators_2",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "snowfall-lib": "snowfall-lib",
