@@ -115,6 +115,9 @@
 
       # Add modules to all homes.
       homes.modules = with inputs; [
+      ];
+
+      homes.users.aloshy.modules = with inputs; [
         mac-app-util.homeManagerModules.default
       ];
 
