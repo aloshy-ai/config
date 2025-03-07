@@ -3,14 +3,15 @@
   "packages": [
     "github:snowfallorg/flake",
     "nodePackages.prettier@latest",
-    "cachix@latest"
+    "cachix@latest",
+    "fh@latest"
   ],
   "shell": {
     "init_hook": ["devbox run --list"],
     "scripts": {
-      "format": "nix fmt .",
+      "format":         "nix fmt .",
       "switch-silicon": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#silicon",
-      "build-rpi4": "nix build .#sd-aarch64Configurations.rpi4"
+      "build-rpi4":     "nix build .#sd-aarch64Configurations.rpi4"
     }
   }
 }
