@@ -1,15 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
-  "packages": ["github:snowfallorg/flake", "nodePackages.prettier@latest"],
+  "packages": [
+    "github:snowfallorg/flake",
+    "nodePackages.prettier@latest"
+  ],
   "shell": {
     "init_hook": [
       "devbox run --list"
     ],
     "scripts": {
-      "format": "nix fmt .",
+      "format":       "nix fmt .",
       "switch-m2pro": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m2pro",
       "switch-m3pro": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m3pro",
-      "build-rpi4": "nix build .#sd-aarch64Configurations.rpi4"
+      "build-rpi4":   "nix build .#sd-aarch64Configurations.rpi4"
     }
   }
 }

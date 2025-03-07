@@ -18,10 +18,7 @@
   ...
 }: {
   # Your configuration.
-  environment.systemPackages = with pkgs; [
-    utm
-    brave
-    # colima
-    # docker
-  ];
+  environment.variables = {
+    # "DOCKER_HOST" = "unix://$HOME/.colima/docker.sock";
+  }
 }
