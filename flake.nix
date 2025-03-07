@@ -116,7 +116,7 @@
         mac-app-util.darwinModules.default
         lix-module.nixosModules.default
         nix-homebrew.darwinModules.nix-homebrew
-        nix-rosetta-builder.darwinModules.default
+        # nix-rosetta-builder.darwinModules.default
       ];
 
       # Add modules to all NixOS systems.
