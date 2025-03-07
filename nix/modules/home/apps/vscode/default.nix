@@ -23,14 +23,15 @@
     package = pkgs.vscodium;
     mutableExtensionsDir = true;
     profiles.default.userSettings = {
-      "editor.fontSize" = 14;
       "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
       "editor.fontLigatures" = true;
-      "editor.stickyScroll.enabled" = false;
+      "editor.fontSize" = 14;
       "editor.minimap.enabled" = false;
-      "terminal.integrated.fontLigatures.enabled" = true;
+      "editor.stickyScroll.enabled" = false;
       "files.autoSave" = "afterDelay";
+      "terminal.integrated.fontLigatures.enabled" = true;
       "workbench.colorTheme" = "GitHub Dark";
+      "git.confirmSync" = false;
     };
     profiles.default.extensions = with pkgs.vscode-marketplace; [
       zongou.vs-seti-jetbrainsmononerdfontmono
