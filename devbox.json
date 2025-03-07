@@ -1,8 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
-  "packages": [
-    "github:snowfallorg/flake"
-  ],
+  "packages": ["github:snowfallorg/flake", "nodePackages.prettier@latest"],
   "shell": {
     "init_hook": [
       "alias nix='nix --extra-experimental-features nix-command'",
@@ -10,9 +8,9 @@
       "devbox run --list"
     ],
     "scripts": {
-      "format":         "nix fmt .",
-      "m2pro":          "flake build-darwin m2pro",
-      "rpi4":           "nix build .#sd-aarch64Configurations.rpi4"
+      "format": "nix fmt .",
+      "m2pro": "flake build-darwin m2pro",
+      "rpi4": "nix build .#sd-aarch64Configurations.rpi4"
     }
   }
 }

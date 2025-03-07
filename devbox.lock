@@ -6,6 +6,54 @@
     },
     "github:snowfallorg/flake": {
       "resolved": "github:snowfallorg/flake/d3b1167f7265d28549930b95b98327c277ef8afd?lastModified=1716675632&narHash=sha256-AOgmoVZvMPUMSlHMrRjWaPykNS5YWxnUNp7STgfjGdA%3D"
+    },
+    "nodePackages.prettier@latest": {
+      "last_modified": "2025-02-26T05:29:08Z",
+      "resolved": "github:NixOS/nixpkgs/3a05eebede89661660945da1f151959900903b6a#nodePackages.prettier",
+      "source": "devbox-search",
+      "version": "3.5.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lm9hk1n71vkiikm67nghrkbsipcvbkvl-prettier-3.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/lm9hk1n71vkiikm67nghrkbsipcvbkvl-prettier-3.5.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hx8jyny7h8li13n78kyanyawj0whbcvb-prettier-3.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hx8jyny7h8li13n78kyanyawj0whbcvb-prettier-3.5.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/laz8sikvqydspmkiy105h11gwi8z53z9-prettier-3.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/laz8sikvqydspmkiy105h11gwi8z53z9-prettier-3.5.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kgvkmqw96w38jqng7iy11wr9ir98893p-prettier-3.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kgvkmqw96w38jqng7iy11wr9ir98893p-prettier-3.5.2"
+        }
+      }
     }
   }
 }
