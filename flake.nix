@@ -15,12 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    snowfall-flake = {
-			url = "github:snowfallorg/flake";
-			# Flake requires some packages that aren't on 22.05, but are available on unstable.
-			inputs.nixpkgs.follows = "unstable";
-		};
-
     mac-app-util = {
       url = "github:hraban/mac-app-util";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -83,7 +77,6 @@
       };
 
       overlays = with inputs; [
-          snowfall-flake.overlays.default
           nix-vscode-extensions.overlays.default
         ];
 
