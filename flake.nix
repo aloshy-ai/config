@@ -49,6 +49,19 @@
       url = "github:zhaofengli-wip/nix-homebrew";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
+    homebrew-bundle = {
+      url = "github:homebrew/homebrew-bundle";
+      flake = false;
+    };
   };
 
   outputs = inputs:
@@ -89,6 +102,7 @@
       systems.modules.darwin = with inputs; [
         mac-app-util.darwinModules.default
         lix-module.nixosModules.default
+        nix-homebrew.darwinModules.nix-homebrew
       ];
 
       # Add modules to all NixOS systems.
