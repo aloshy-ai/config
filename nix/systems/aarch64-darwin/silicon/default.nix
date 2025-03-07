@@ -20,5 +20,5 @@
   # Your configuration.
   system.stateVersion = 6;
   nixpkgs.config.allowUnsupportedSystem = true;
-  nixpkgs.crossSystem.system = "aarch64-linux";
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 }
