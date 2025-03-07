@@ -34,7 +34,6 @@
     };
     profiles.default.extensions = with pkgs.vscode-marketplace; [
       zongou.vs-seti-jetbrainsmononerdfontmono
-      SanjulaGanepola.github-local-actions
       ms-vscode-remote.remote-containers
       github.vscode-pull-request-github
       github.vscode-github-actions
