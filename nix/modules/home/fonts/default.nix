@@ -18,12 +18,7 @@
   ...
 }: {
   # Your configuration.
-  fonts = with pkgs.nerd-fonts; [
-    fira-code
-    jetbrains-mono
-    iosevka
-    symbols-only
-    roboto-mono
-    noto
-  ];
+  fonts = {
+    fontconfig.enable = true;
+  }
 }
