@@ -15,7 +15,8 @@
         "terminal.integrated.fontLigatures.enabled": true,
         "workbench.colorTheme": "GitHub Dark",
         "workbench.activityBar.orientation": "vertical",
-        "git.confirmSync": false
+        "git.confirmSync": false,
+        "git.autofetch": true
       },
       "extensions": [
         "zongou.vs-seti-jetbrainsmononerdfontmono",
