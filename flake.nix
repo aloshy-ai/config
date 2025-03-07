@@ -124,8 +124,8 @@
       homes.modules = with inputs; [
       ];
 
-      homes.users.aloshy.modules = with inputs; [
-        # mac-app-util.homeManagerModules.default
+      homes.users."aloshy@silicon".modules = with inputs; [
+        mac-app-util.homeManagerModules.default
       ];
 
       deploy = {inherit (inputs) self;};

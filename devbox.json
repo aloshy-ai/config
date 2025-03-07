@@ -11,8 +11,7 @@
     ],
     "scripts": {
       "format":       "nix fmt .",
-      "switch-m2pro": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m2pro",
-      "switch-m3pro": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m3pro",
+      "switch-silicon": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#silicon",
       "build-rpi4":   "nix build .#sd-aarch64Configurations.rpi4"
     }
   }
