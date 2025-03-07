@@ -97,7 +97,6 @@
       # Add modules to all NixOS systems.
       systems.modules.nixos = with inputs; [
         nixos-generators.nixosModules.all-formats
-        lix-module.nixosModules.default
       ];
 
       # Add modules to all homes.
