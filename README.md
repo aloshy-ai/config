@@ -25,9 +25,8 @@ devbox run <script>
 Scripts are custom commands that can be run using this project's environment. This project has the following scripts:
 
 * [build-rpi4](#devbox-run-build-rpi4)
+* [darwin-rebuild](#devbox-run-darwin-rebuild)
 * [format](#devbox-run-format)
-* [switch-m2pro](#devbox-run-switch-m2pro)
-* [switch-m3pro](#devbox-run-switch-m3pro)
 
 ## Shell Init Hook
 The Shell Init Hook is a script that runs whenever the devbox environment is instantiated. It runs 
@@ -40,6 +39,8 @@ devbox run --list
 
 * github:snowfallorg/flake
 * [nodePackages.prettier@latest](https://www.nixhub.io/packages/nodePackages.prettier)
+* [cachix@latest](https://www.nixhub.io/packages/cachix)
+* [fh@latest](https://www.nixhub.io/packages/fh)
 
 ## Script Details
 
@@ -49,21 +50,15 @@ nix build .#sd-aarch64Configurations.rpi4
 ```
 &ensp;
 
+### devbox run darwin-rebuild
+```sh
+nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#silicon
+```
+&ensp;
+
 ### devbox run format
 ```sh
 nix fmt .
-```
-&ensp;
-
-### devbox run switch-m2pro
-```sh
-nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m2pro
-```
-&ensp;
-
-### devbox run switch-m3pro
-```sh
-nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m3pro
 ```
 &ensp;
 
