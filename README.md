@@ -45,7 +45,7 @@ devbox run --list
 
 ### devbox run build-rpi4
 ```sh
-nix --extra-experimental-features 'nix-command flakes' build .#sd-aarch64Configurations.rpi4
+nix build .#sd-aarch64Configurations.rpi4
 ```
 &ensp;
 
@@ -57,13 +57,13 @@ nix fmt .
 
 ### devbox run switch-m2pro
 ```sh
-nix --extra-experimental-features 'nix-command flakes' run github:LnL7/nix-darwin#darwin-rebuild m2pro
+nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m2pro
 ```
 &ensp;
 
 ### devbox run switch-m3pro
 ```sh
-nix --extra-experimental-features 'nix-command flakes' run github:LnL7/nix-darwin#darwin-rebuild m3pro
+nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#m3pro
 ```
 &ensp;
 
