@@ -1,6 +1,6 @@
 {
-  "name": "aloshy.🅰🅸 | DevContainer",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:alpine",
+  "name": "aloshy.🅰🅸 | NixContainer",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
   "customizations": {
@@ -40,6 +40,7 @@
     }
   },
   "features": {
+    "ghcr.io/devcontainers-extra/features/vscode-server:1": {},
     "ghcr.io/devcontainers/features/nix:1": {
       "extraNixConfig": "experimental-features = nix-command flakes",
       "packages": "direnv devbox"
