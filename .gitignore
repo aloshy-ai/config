@@ -1,5 +1,6 @@
 .devbox
 .direnv
+.idea
 .env*
 !.envrc
 !.env.example
