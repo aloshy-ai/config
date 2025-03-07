@@ -19,9 +19,9 @@
 }: {
   # Your configuration.
   # nix-rosetta-builder.onDemand = true;
-  nix.linux-builder.enable = true;
-  # nix.linux-builder.systems = ["aarch64-linux"];
   # nix.distributedBuilds = true;
+  nix.linux-builder.enable = true;
+  nix.linux-builder.systems = ["aarch64-linux"];
   system.activationScripts.postUserActivation.text = ''
     if [ -f /etc/nix/builder_ed25519 ]; then
       sudo chown "$USER" /etc/nix/builder_ed25519*
