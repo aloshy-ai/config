@@ -22,7 +22,17 @@
     enable = true;
     package = pkgs.vscodium;
     mutableExtensionsDir = true;
-    extensions = with pkgs.vscode-marketplace; [
+    userSettings = {
+      "editor.fontSize" = 14;
+      "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
+      "editor.fontLigatures" = true;
+      "editor.stickyScroll.enabled" = false;
+      "editor.minimap.enabled" = false;
+      "terminal.integrated.fontLigatures.enabled" = true;
+      "files.autoSave" = "afterDelay";
+      "workbench.colorTheme" = "GitHub Dark";
+    };
+    profiles.default.extensions = with pkgs.vscode-marketplace; [
       zongou.vs-seti-jetbrainsmononerdfontmono
       SanjulaGanepola.github-local-actions
       ms-vscode-remote.remote-containers
