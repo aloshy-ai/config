@@ -83,7 +83,7 @@
       };
 
       overlays = with inputs; [
-          lix.overlays.default
+          lix-module.overlays.default
           snowfall-flake.overlays.default
           nix-vscode-extensions.overlays.default
         ];
