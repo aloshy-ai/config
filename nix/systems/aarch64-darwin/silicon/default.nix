@@ -19,4 +19,6 @@
 }: {
   # Your configuration.
   system.stateVersion = 6;
+  pkgs.config.allowUnsupportedSystem = true;
+  pkgs.crossSystem.system = "aarch64-linux";
 }
