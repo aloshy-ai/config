@@ -64,11 +64,6 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
-
-    nix-rosetta-builder = {
-      url = "github:cpick/nix-rosetta-builder";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs:
@@ -110,7 +105,6 @@
         mac-app-util.darwinModules.default
         lix-module.nixosModules.default
         nix-homebrew.darwinModules.nix-homebrew
-        nix-rosetta-builder.darwinModules.default
       ];
 
       # Add modules to all NixOS systems.
