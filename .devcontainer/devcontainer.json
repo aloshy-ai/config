@@ -47,6 +47,9 @@
       "packages": "direnv devbox"
     }
   },
+  "runArgs": [
+    "--network=host" // Use host network
+  ],
   "postStartCommand": "direnv allow > /dev/null 2>&1 || true",
   "postAttachCommand": "direnv reload"
 }
