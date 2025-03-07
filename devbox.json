@@ -4,7 +4,8 @@
     "github:snowfallorg/flake",
     "nodePackages.prettier@latest",
     "cachix@latest",
-    "fh@latest"
+    "fh@latest",
+    "docker@latest"
   ],
   "shell": {
     "init_hook": ["devbox run --list"],

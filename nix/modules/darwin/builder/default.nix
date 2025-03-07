@@ -17,18 +17,18 @@
   config,
   ...
 }: {
-  nix.enable = true;
-  nix.distributedBuilds = true;
-  nix.buildMachines = [
-    {
-      hostName = "nixos.tail9a6c09.ts.net";
-      systems = ["aarch64-linux"];
-      protocol = "ssh";
-      sshUser = "aloshy";
-      sshKey = "/Users/aloshy/.ssh/id_ed25519";
-      # ssh aloshy@nixos.tail9a6c09.ts.net "base64 -w0 /etc/ssh/ssh_host_ed25519_key.pub"
-      publicHostKey = "c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUpCckEzMDNYdUVQcDYrcmFPYnBlSkhIUURDazVLajFta1FuVDMyVXRwVkcgcm9vdEBuaXhvcwo=";
-      supportedFeatures = ["benchmark" "big-parallel" "kvm"];
-    }
-  ];
+  # nix.enable = true;
+  # nix.distributedBuilds = true;
+  # nix.buildMachines = [
+  #   {
+  #     hostName = "nixos.tail9a6c09.ts.net";
+  #     systems = ["aarch64-linux"];
+  #     protocol = "ssh";
+  #     sshUser = "aloshy";
+  #     sshKey = "/Users/aloshy/.ssh/id_ed25519";
+  #     # ssh aloshy@nixos.tail9a6c09.ts.net "base64 -w0 /etc/ssh/ssh_host_ed25519_key.pub"
+  #     publicHostKey = "c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUpCckEzMDNYdUVQcDYrcmFPYnBlSkhIUURDazVLajFta1FuVDMyVXRwVkcgcm9vdEBuaXhvcwo=";
+  #     supportedFeatures = ["benchmark" "big-parallel" "kvm"];
+  #   }
+  # ];
 }

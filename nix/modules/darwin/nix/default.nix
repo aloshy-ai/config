@@ -42,8 +42,8 @@
       options = "--delete-older-than 30d";
     };
 
-    extraOptions = ''
-      extra-platforms = x86_64-linux aarch64-linux
-    '';
+    # extraOptions = ''
+    #   extra-platforms = x86_64-linux aarch64-linux
+    # '';
   };
 }
