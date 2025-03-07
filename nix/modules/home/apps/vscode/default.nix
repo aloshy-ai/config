@@ -22,7 +22,7 @@
     enable = true;
     package = pkgs.vscodium;
     mutableExtensionsDir = true;
-    userSettings = {
+    profiles.default.userSettings = {
       "editor.fontSize" = 14;
       "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
       "editor.fontLigatures" = true;

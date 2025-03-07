@@ -20,5 +20,6 @@
   # Your configuration.
   home.packages = with pkgs; [
     devbox
+    cachix
   ];
 }
