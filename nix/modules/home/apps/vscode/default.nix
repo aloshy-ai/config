@@ -20,7 +20,7 @@
   # Your configuration.
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    # package = pkgs.vscodium;
     mutableExtensionsDir = true;
     profiles.default.userSettings = {
       "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
