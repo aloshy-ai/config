@@ -13,7 +13,7 @@
       "format":         "nix fmt .",
       "darwin-rebuild": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#silicon",
       "build-sdcard":     "nix build .#sd-aarch64Configurations.rpi4",
-      "build-docker": "nix build .#dockerConfigurations.nixcontainer"
+      "build-docker": "nix build .#dockerConfigurations.nixcontainer-arm64"
     }
   }
 }
