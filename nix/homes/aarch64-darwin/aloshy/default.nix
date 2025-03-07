@@ -19,5 +19,5 @@
 }: {
   # Your configuration.
   home.stateVersion = "25.05";
-  home.username = "aloshy";
+  snowfallorg.user.enable = true;
 }
