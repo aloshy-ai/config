@@ -18,8 +18,7 @@
   ...
 }: {
   # Your configuration.
-  environment.systemPackages = with pkgs; [
-    utm
-    brave
-  ];
+  programs.starship = {
+    enable = true;
+  };
 }

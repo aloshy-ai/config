@@ -17,7 +17,33 @@
   config,
   ...
 }: {
-  # Your configuration.
-  nix.settings.experimental-features = "nix-command flakes";
-  nix.settings.trusted-users = ["@admin" "@wheel" "@nixbld"];
+  nix = {
+    package = pkgs.nix;
+    settings = {
+      substituters = ["https://nix-community.cachix.org" "https://cache.nixos.org"];
+      trusted-public-keys = ["cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="];
+      extra-nix-path = "nixpkgs=flake:nixpkgs";
+      trusted-users = ["root" "@admin" "@nixbld"];
+      extra-trusted-users = ["root" "@admin" "@nixbld"];
+      experimental-features = ["nix-command" "flakes"];
+      builders-use-substitutes = true;
+      keep-outputs = true;
+      keep-derivations = true;
+    };
+
+    gc = {
+      # user = "root";
+      automatic = true;
+      interval = {
+        Weekday = 0;
+        Hour = 2;
+        Minute = 0;
+      };
+      options = "--delete-older-than 30d";
+    };
+
+    extraOptions = ''
+      extra-platforms = x86_64-linux aarch64-linux
+    '';
+  };
 }
