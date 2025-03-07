@@ -15,6 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    snowfall-flake = {
+      url = "github:snowfallorg/flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     mac-app-util = {
       url = "github:hraban/mac-app-util";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -77,8 +82,9 @@
       };
 
       overlays = with inputs; [
-          nix-vscode-extensions.overlays.default
-        ];
+        snowfall-flake.overlays.default
+        nix-vscode-extensions.overlays.default
+      ];
 
       # Add modules to all Darwin systems.
       systems.modules.darwin = with inputs; [
