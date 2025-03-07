@@ -18,7 +18,7 @@
   ...
 }: {
   # Your configuration.
-  nix.linux-builder.enable = true;
+  # nix.linux-builder.enable = true;
   # nix.linux-builder.systems = ["aarch64-linux"];
   # nix.distributedBuilds = true;
   # system.activationScripts.postUserActivation.text = ''
