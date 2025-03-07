@@ -64,6 +64,11 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -121,6 +126,17 @@
         mac-app-util.homeManagerModules.default
       ];
 
+      deploy = {inherit (inputs) self;};
+
+      checks =
+        builtins.mapAttrs (
+          system: deploy-lib: deploy-lib.deployChecks inputs.self.deploy
+        )
+        inputs.deploy-rs.lib;
+
       outputs-builder = channels: {formatter = channels.nixpkgs.alejandra;};
+    }
+    // {
+      self = inputs.self;
     };
 }
