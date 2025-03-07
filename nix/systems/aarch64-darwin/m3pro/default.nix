@@ -19,10 +19,10 @@
 }: {
   # Your configuration.
   system.stateVersion = 6;
-  # snowfallorg.users.aloshy = {
-  #   create = true;
-  #   home = {
-  #     enable = true;
-  #   };
-  # };
+  snowfallorg.users.aloshy = {
+    create = true;
+    home = {
+      enable = true;
+    };
+  };
 }
