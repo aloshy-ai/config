@@ -21,5 +21,5 @@
 }:
 {
     # Your configuration.
-    environment.systemPackages = [ inputs.fh.packages.${system}.default ];
+    # environment.systemPackages = [ inputs.fh.packages.${system}.default ];
 }
