@@ -33,8 +33,6 @@ Scripts are custom commands that can be run using this project's environment. Th
 The Shell Init Hook is a script that runs whenever the devbox environment is instantiated. It runs 
 on `devbox shell` and on `devbox run`.
 ```sh
-alias nix='nix --extra-experimental-features nix-command'
-alias darwin-rebuild='nix run github:LnL7/nix-darwin#darwin-rebuild'
 devbox run --list
 ```
 
@@ -47,7 +45,7 @@ devbox run --list
 
 ### devbox run build-rpi4
 ```sh
-nix build .#sd-aarch64Configurations.rpi4
+nix --extra-experimental-features 'nix-command flakes' build .#sd-aarch64Configurations.rpi4
 ```
 &ensp;
 
@@ -59,13 +57,13 @@ nix fmt .
 
 ### devbox run switch-m2pro
 ```sh
-flake build-darwin m2pro
+nix --extra-experimental-features 'nix-command flakes' run github:LnL7/nix-darwin#darwin-rebuild m2pro
 ```
 &ensp;
 
 ### devbox run switch-m3pro
 ```sh
-flake build-darwin m3pro
+nix --extra-experimental-features 'nix-command flakes' run github:LnL7/nix-darwin#darwin-rebuild m3pro
 ```
 &ensp;
 
