@@ -42,7 +42,6 @@
       github.github-vscode-theme
       esbenp.prettier-vscode
       kamadorueda.alejandra
-      github.copilot-chat
       fsevenm.run-it-on
       jetpack-io.devbox
       github.codespaces
