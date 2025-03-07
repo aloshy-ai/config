@@ -17,24 +17,12 @@
   config,
   ...
 }: {
-  # Your configuration.
-  programs.git = {
+  programs.direnv = {
     enable = true;
-    userName = "aloshy.🅰🅸";
-    userEmail = "noreply@aloshy.ai";
-    ignores = ["*.swp"];
-    lfs = {
+    enableZshIntegration = true;
+    enableBashIntegration = true;
+    nix-direnv = {
       enable = true;
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-      core = {
-        editor = "nano";
-        autocrlf = "input";
-      };
-      commit.gpgsign = false;
-      pull.rebase = true;
-      rebase.autoStash = true;
     };
   };
 }

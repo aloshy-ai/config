@@ -1,6 +1,86 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "cachix@latest": {
+      "last_modified": "2025-03-01T01:09:10Z",
+      "resolved": "github:NixOS/nixpkgs/199169a2135e6b864a888e89a2ace345703c025d#cachix",
+      "source": "devbox-search",
+      "version": "1.7.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/aq0wz73102r689swi4q5j4r8v13rl427-cachix-1.7.6-bin",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/sf41a8bbq7gj1mjgl0s1sy7ddy7gvqsm-cachix-1.7.6-doc"
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/az0f7dldnvfw23rjwn7yb1xpjd3g0nan-cachix-1.7.6"
+            }
+          ],
+          "store_path": "/nix/store/aq0wz73102r689swi4q5j4r8v13rl427-cachix-1.7.6-bin"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/rqx78pkbahp0sxzwcxvj92li45r7lkkv-cachix-1.7.6-bin",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/q3gi5cj16dd27gz8hh4p9qmczcs74yfc-cachix-1.7.6-doc"
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/npgnzqglv30hgpf1qy46gydf6vnmmnry-cachix-1.7.6"
+            }
+          ],
+          "store_path": "/nix/store/rqx78pkbahp0sxzwcxvj92li45r7lkkv-cachix-1.7.6-bin"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/4xzw1k67pnhzrij561my669dn8ngw4bk-cachix-1.7.6-bin",
+              "default": true
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/jwmclqaf3xnv8542xcwgsl8qslqqv6kl-cachix-1.7.6"
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/hqf56lcm273s2s1izfvclqy7lv3f1pbg-cachix-1.7.6-doc"
+            }
+          ],
+          "store_path": "/nix/store/4xzw1k67pnhzrij561my669dn8ngw4bk-cachix-1.7.6-bin"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "bin",
+              "path": "/nix/store/3dh6kis0gid2z1k4p3xivqh0mw7c57qf-cachix-1.7.6-bin",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/r04y196jdl1lnj6wzrcw6kmcmyzkk700-cachix-1.7.6-doc"
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/qvkha5ls4vm3fiksiwcd2f9l6pbrkzdl-cachix-1.7.6"
+            }
+          ],
+          "store_path": "/nix/store/3dh6kis0gid2z1k4p3xivqh0mw7c57qf-cachix-1.7.6-bin"
+        }
+      }
+    },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
       "resolved": "github:NixOS/nixpkgs/02032da4af073d0f6110540c8677f16d4be0117f?lastModified=1741037377&narHash=sha256-SvtvVKHaUX4Owb%2BPasySwZsoc5VUeTf1px34BByiOxw%3D"
     },
