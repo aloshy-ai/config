@@ -33,6 +33,7 @@
       "workbench.colorTheme" = "GitHub Dark";
       "workbench.activityBar.orientation" = "vertical";
       "git.confirmSync" = false;
+      "git.autofetch" = true;
     };
     profiles.default.extensions = with pkgs.vscode-marketplace; [
       zongou.vs-seti-jetbrainsmononerdfontmono
