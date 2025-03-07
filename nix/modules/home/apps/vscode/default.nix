@@ -31,6 +31,7 @@
       "files.autoSave" = "afterDelay";
       "terminal.integrated.fontLigatures.enabled" = true;
       "workbench.colorTheme" = "GitHub Dark";
+      "workbench.activityBar.orientation" = "vertical";
       "git.confirmSync" = false;
     };
     profiles.default.extensions = with pkgs.vscode-marketplace; [
