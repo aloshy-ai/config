@@ -19,6 +19,5 @@
 }: {
   # Your configuration.
   environment.systemPackages = with pkgs; [
-    snowfallorg.flake
   ];
 }
