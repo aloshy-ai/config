@@ -20,7 +20,7 @@
   # Your configuration.
   programs.vscode = {
     enable = true;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-marketplace; [
       ms-vscode-remote.remote-containers
       github.vscode-pull-request-github
       github.vscode-github-actions
@@ -29,6 +29,7 @@
       esbenp.prettier-vscode
       kamadorueda.alejandra
       github.copilot-chat
+      jetpack-io.devbox
       github.codespaces
       github.copilot
       bbenoist.nix
