@@ -19,6 +19,7 @@
 }: {
   # Your configuration.
   home.packages = with pkgs; [
+    snowfallorg.flake
     devbox
   ];
 }

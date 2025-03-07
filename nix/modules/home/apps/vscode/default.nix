@@ -20,7 +20,9 @@
   # Your configuration.
   programs.vscode = {
     enable = true;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
+    package = pkgs.vscodium;
+    mutableExtensionsDir = true;
+    extensions = with pkgs.vscode-marketplace; [
       ms-vscode-remote.remote-containers
       github.vscode-pull-request-github
       github.vscode-github-actions

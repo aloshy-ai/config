@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
@@ -13,6 +14,12 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    snowfall-flake = {
+			url = "github:snowfallorg/flake";
+			# Flake requires some packages that aren't on 22.05, but are available on unstable.
+			inputs.nixpkgs.follows = "unstable";
+		};
 
     mac-app-util = {
       url = "github:hraban/mac-app-util";
@@ -74,6 +81,12 @@
       channels-config = {
         allowUnfree = true;
       };
+
+      overlays = with inputs; [
+          lix.overlays.default
+          snowfall-flake.overlays.default
+          nix-vscode-extensions.overlays.default
+        ];
 
       # Add modules to all Darwin systems.
       systems.modules.darwin = with inputs; [
