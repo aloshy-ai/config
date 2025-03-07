@@ -107,6 +107,7 @@
 
       # Add modules to all Darwin systems.
       systems.modules.darwin = with inputs; [
+        home-manager.darwinModules.home-manager
         mac-app-util.darwinModules.default
         lix-module.nixosModules.default
         nix-homebrew.darwinModules.nix-homebrew
@@ -114,6 +115,7 @@
 
       # Add modules to all NixOS systems.
       systems.modules.nixos = with inputs; [
+        home-manager.nixosModules.home-manager
         nixos-generators.nixosModules.all-formats
         lix-module.nixosModules.default
       ];
@@ -123,7 +125,7 @@
       ];
 
       homes.users.aloshy.modules = with inputs; [
-        mac-app-util.homeManagerModules.default
+        # mac-app-util.homeManagerModules.default
       ];
 
       deploy = {inherit (inputs) self;};
