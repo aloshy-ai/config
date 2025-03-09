@@ -481,11 +481,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741561881,
-        "narHash": "sha256-Mnt6SH3SR/ajMweX7kAovXCaNhMFIlQtHMXVk9GOPRk=",
+        "lastModified": 1741561952,
+        "narHash": "sha256-6dbNg3h0LTPMgcDuNlhAr8fJbek0UJBI38o1DHTtUSk=",
         "owner": "aloshy-ai",
         "repo": "nix-photogimp",
-        "rev": "3deba6888d76c70d35fb2f98f2c6e38bb34ab706",
+        "rev": "1bef7868cf7d594a4b2a4b4244021284431a27d6",
         "type": "github"
       },
       "original": {
