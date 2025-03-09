@@ -20,7 +20,4 @@
   # Your configuration.
   system.stateVersion = 6;
   nixpkgs.config.allowUnsupportedSystem = true;
-
-  # Enable PhotoGIMP
-  programs.photogimp.enable = true;
 }
