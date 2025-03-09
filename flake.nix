@@ -76,7 +76,7 @@
     # };
 
     nix-photogimp = {
-      url = "github:aloshy/nix-photogimp";
+      url = "github:aloshy-ai/nix-photogimp";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
