@@ -20,4 +20,7 @@
   # Your configuration.
   home.stateVersion = "25.05";
   snowfallorg.user.enable = true;
+
+  # Enable PhotoGIMP
+  programs.photogimp.enable = true;
 }

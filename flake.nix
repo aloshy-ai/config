@@ -74,6 +74,11 @@
     #   url = "github:nix-community/nixos-vscode-server";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+
+    nix-photogimp = {
+      url = "github:aloshy/nix-photogimp";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -116,6 +121,7 @@
         mac-app-util.darwinModules.default
         lix-module.nixosModules.default
         nix-homebrew.darwinModules.nix-homebrew
+        inputs.nix-photogimp.darwinModules.default
       ];
 
       # Add modules to all NixOS systems.
@@ -131,6 +137,7 @@
 
       homes.users."aloshy@silicon".modules = with inputs; [
         mac-app-util.homeManagerModules.default
+        inputs.nix-photogimp.homeManagerModules.default
       ];
 
       deploy = {inherit (inputs) self;};
