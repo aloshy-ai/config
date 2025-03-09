@@ -21,6 +21,8 @@
   environment.systemPackages = with pkgs; [
     utm
     brave
+    telegram-desktop
+    inkscape
     # colima
     # docker
   ];
