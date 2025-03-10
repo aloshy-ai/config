@@ -21,5 +21,6 @@
   home.packages = with pkgs; [
     devbox
     cachix
+    act
   ];
 }
