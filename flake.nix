@@ -70,11 +70,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # vscode-server = {
-    #   url = "github:nix-community/nixos-vscode-server";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     nix-photogimp = {
       url = "github:aloshy-ai/nix-photogimp";
       inputs.nixpkgs.follows = "nixpkgs";
