@@ -79,6 +79,11 @@
       url = "github:aloshy-ai/nix-photogimp";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-inkustrator = {
+      url = "github:aloshy-ai/nix-inkustrator";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -122,6 +127,10 @@
         lix-module.nixosModules.default
         nix-homebrew.darwinModules.nix-homebrew
         inputs.nix-photogimp.darwinModules.default
+        inputs.nix-inkustrator.darwinModules.default
+        {
+          programs.inkustrator.enable = true;
+        }
       ];
 
       # Add modules to all NixOS systems.
@@ -138,6 +147,7 @@
       homes.users."aloshy@silicon".modules = with inputs; [
         mac-app-util.homeManagerModules.default
         inputs.nix-photogimp.homeManagerModules.default
+        inputs.nix-inkustrator.homeManagerModules.default
       ];
 
       deploy = {inherit (inputs) self;};
