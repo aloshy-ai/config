@@ -1,0 +1,36 @@
+name: Detect Secrets
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  detect-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install detect-secrets
+        run: |
+          pip install detect-secrets
+
+      - name: Scan for secrets
+        run: |
+          detect-secrets scan --baseline .secrets.baseline || echo "Secrets detected! Review the output above."
+          
+      - name: Scan for GitHub tokens
+        run: |
+          git log -p | grep -i "gho_" || echo "No GitHub tokens found in Git history"
+          
+      - name: Check for sensitive file paths
+        run: |
+          for pattern in '~' '.local/bin' 'setup-github-token'; do
+            echo "Checking for files with pattern: $pattern"
+            git log --all --name-only --pretty=format: | grep -i "$pattern" || echo "No files found with pattern: $pattern"
+          done

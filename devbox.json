@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
+  "packages": [
+    "github:snowfallorg/flake",
+    "nodePackages.prettier@latest",
+    "cachix@latest",
+    "fh@latest",
+    "docker@latest",
+    "age@latest",
+    "git@latest"
+  ],
+  "shell": {
+    "init_hook": ["devbox run --list"],
+    "scripts": {
+      "format":         "nix fmt .",
+      "darwin-rebuild": "nix run github:LnL7/nix-darwin#darwin-rebuild -- switch --flake .#silicon",
+      "build-sdcard":     "nix build .#sd-aarch64Configurations.rpi4",
+      "build-docker": "nix build .#dockerConfigurations.nixcontainer-arm64",
+      "list-secrets": "RESULT_PATH=$(nix-build ./nix/modules/home/secrets/cmd-wrappers.nix -A listSecretsCmd --no-out-link) && $RESULT_PATH/bin/list-secrets-cmd",
+      "add-secret": "RESULT_PATH=$(nix-build ./nix/modules/home/secrets/cmd-wrappers.nix -A addSecretCmd --no-out-link) && $RESULT_PATH/bin/add-secret-cmd \"$1\" \"$2\"",
+      "delete-secret": "RESULT_PATH=$(nix-build ./nix/modules/home/secrets/cmd-wrappers.nix -A deleteSecretCmd --no-out-link) && $RESULT_PATH/bin/delete-secret-cmd \"$1\""
+    }
+  }
+}
