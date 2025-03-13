@@ -21,7 +21,5 @@ jobs:
     with:
       visibility: public
       enable-ssh-agent: true
-      enable-cachix: true
     secrets:
       ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      cachix-auth-token: ${{ secrets.CACHIX_AUTH_TOKEN }}
