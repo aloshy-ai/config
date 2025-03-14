@@ -84,21 +84,4 @@
       fi
     '';
   };
-
-  services.mcp-servers = {
-    servers = {
-      github = {
-        enable = true;
-        # Use the secrets-helper to get the token
-        access-token = "$(secrets-helper show GITHUB_TOKEN)";
-      };
-      filesystem = {
-        enable = true;
-        allowed-paths = [
-          "$HOME/Desktop"
-          "$HOME/Documents"
-        ];
-      };
-    };
-  };
 }
