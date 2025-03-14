@@ -25,5 +25,6 @@
     age
     inputs.agenix.packages.${system}.default
     snowfallorg.flake
+    tree
   ];
 }
