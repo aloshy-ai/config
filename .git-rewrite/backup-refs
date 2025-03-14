@@ -1,7 +1,0 @@
-36d3f2791e2209cb7bd5c141e786fc9871120185 commit	refs/heads/clean-history
-36d3f2791e2209cb7bd5c141e786fc9871120185 commit	refs/heads/main
-aa269947e1134a661b42e3ed502cd56f0f15767f commit	refs/heads/update_flake_lock_action
-0e277626711f3661935fd48d31caa197b11853ed commit	refs/remotes/origin/HEAD
-0e277626711f3661935fd48d31caa197b11853ed commit	refs/remotes/origin/main
-f0e01433f82b7ee92235a141567e8fe296fd3273 commit	refs/remotes/origin/update_flake_lock_action
-03d384574e5cf3c4340dd0cd2e0eb1c9e815c105 commit	refs/stash
