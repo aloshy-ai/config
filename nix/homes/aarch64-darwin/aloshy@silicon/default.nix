@@ -21,67 +21,17 @@
   home.stateVersion = "25.05";
   snowfallorg.user.enable = true;
 
-  # Enable the secrets manager
+  # Re-enable the original secrets manager
   services.secrets-manager = {
-    enable = true;
-    # Optional: Specify a remote Git repository for your secrets
+    enable = true; # Re-enable the service
     remoteUrl = "https://github.com/aloshy-ai/nix-secrets.git";
-    # Path to your SSH key for decryption
     identityFile = "~/.ssh/id_ed25519";
-    # Where to export decrypted secrets (default is ~/.secrets)
     exportPath = "~/.secrets";
-    # Set your public key for encryption
     publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIMn4QR7tS9Ctt9Jve4WqFMsBQMLu6mIgv4ESOURpwZI";
-    # Enable exporting secrets during rebuild
     exportSecrets = true;
-    # Enable pulling repository during rebuild
     pullOnRebuild = true;
-    # Use safe pull mode to avoid conflicts
     pullMode = "safe";
   };
 
-  # We'll keep the script for backward compatibility
-  home.file.".local/bin/decrypt-github-token" = {
-    executable = true;
-    text = ''
-      #!${pkgs.bash}/bin/bash
-      secrets-helper show GITHUB_TOKEN
-    '';
-  };
-
-  # Add a script to decrypt the GitHub SSH key
-  home.file.".local/bin/decrypt-github-ssh-key" = {
-    executable = true;
-    text = ''
-      #!${pkgs.bash}/bin/bash
-      secrets-helper show GITHUB_SSH_KEY
-    '';
-  };
-
-  # Add a generic script to decrypt any secret by name
-  home.file.".local/bin/decrypt-secret" = {
-    executable = true;
-    text = ''
-      #!${pkgs.bash}/bin/bash
-
-      if [ $# -ne 1 ]; then
-        echo "Usage: $0 <secret-name>"
-        echo "Available secrets:"
-        secrets-list
-        exit 1
-      fi
-
-      SECRET_NAME="$1"
-
-      # Use the secrets-helper to show the secret
-      if secrets-helper exists "$SECRET_NAME"; then
-        secrets-helper show "$SECRET_NAME"
-      else
-        echo "Error: Secret '$SECRET_NAME' not found."
-        echo "Available secrets:"
-        secrets-list
-        exit 1
-      fi
-    '';
-  };
+  # Homeage has been removed as per user request
 }

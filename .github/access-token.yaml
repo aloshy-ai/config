@@ -1,7 +1,0 @@
-origin: aloshy-ai/config
-
-statements:
-  - subjects:
-      - repo:${origin}:**
-    permissions:
-      contents: write
