@@ -15,10 +15,6 @@ concurrency:
 jobs:
     DeterminateCI:
       uses: aloshy-ai/ci/.github/workflows/workflow.yml@main
-      permissions:
-        id-token: write
-        contents: write  # Write permission for GitHub Pages deployment
-        pages: write    # Required for GitHub Pages deployment
       with:
         visibility: public
         build-docs: true
