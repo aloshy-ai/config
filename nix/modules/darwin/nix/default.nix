@@ -21,7 +21,7 @@
     package = pkgs.nix;
     settings = {
       substituters = ["https://nix-community.cachix.org" "https://cache.nixos.org"];
-      trusted-public-keys = ["nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="];
+      trusted-public-keys = ["nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" "aloshy-ai.cachix.org-1:94o2uI+Octes/j3azeWxVYngn8rtP7oTZZgF9+N3tdk="];
       extra-nix-path = "nixpkgs=flake:nixpkgs";
       trusted-users = ["root" "@admin" "@nixbld"];
       extra-trusted-users = ["root" "@admin" "@nixbld"];
