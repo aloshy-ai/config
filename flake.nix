@@ -79,6 +79,11 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-mcp-servers = {
+      url = "github:aloshy-ai/nix-mcp-servers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -133,11 +138,12 @@
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
         nixos-generators.nixosModules.all-formats
-        lix-module.nixosModules.default
       ];
 
       # Add modules to all homes.
-      homes.modules = with inputs; [];
+      homes.modules = with inputs; [
+        nix-mcp-servers.homeModules.default
+      ];
 
       homes.users."aloshy@silicon".modules = with inputs; [
         mac-app-util.homeManagerModules.default
